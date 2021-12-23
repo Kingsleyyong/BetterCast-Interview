@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Business Card</title>
+</head>
+<body>
+   <div class="card">
+      <div class="section">
+         <img 
+            id="personalImg"
+            src="img/myImg.jpeg" 
+            alt="Personal Image"
+         >
+      </div>
+
+      <div class="section rightSection">
+         <span>Kingsley Yong</span>
+         <span>+60 10-795 9861</span>
+         <span>kingsleyyong0208@gmail.com</span>
+         <span class="socialAccIcon">
+            <a href="https://www.linkedin.com/in/kingsleyyongjingping/">
+               <img src="img/linkedin.png" alt="LinkedIn" class="icon" >
+            </a>
+            <a href="https://github.com/Kingsleyyong">
+               <img src="img/github.png" alt="Github" class="icon" >
+            </a>
+         </span>
+      </div>
+   </div>
+
+   <div class="form">
+      <label>Paste your photo URL here: </label>
+      <input type="url" id="url" name="photoURL" placeholder="The Photo URL">
+      <button onclick="changePhoto()">Change Photo</button>
+   </div>
+
+   
+   
+</body>
+</html>
+
+<script>
+   function changePhoto() {
+      let elements = document.getElementById("url").value;
+      console.log(elements)
+      document.getElementById("personalImg").src = elements;
+      document.getElementById("url").value = "";
+   }
+</script>
